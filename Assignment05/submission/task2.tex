@@ -1,0 +1,49 @@
+\begin{center}
+$\displaystyle \frac{\delta }{\delta \beta }\sum _{i\ =\ 1}^{N}\left( y_{i}^{*} -X_{i} \times \beta \right)^{2} =0$
+
+$\displaystyle \sum _{i\ =\ 1}^{N}\frac{\delta }{\delta \beta }\left( y_{i}^{*} -X_{i} \times \beta \right)^{2} =0$
+
+$\displaystyle \sum _{i\ =\ 1}^{N} -2X_{i}\left( y_{i}^{*} -X_{i} \times \beta \right) =0$
+
+$\displaystyle 2\sum _{i\ =\ 1}^{N} X_{i}\left( X_{i} \times \beta -y_{i}^{*}\right) =\ 0$
+
+$\displaystyle \sum _{i\ =\ 1}^{N} X_{i} X_{i} \beta -\sum _{i\ =\ 1}^{N} X_{i} y_{i}^{*} =0$
+
+$\displaystyle X^{T} X \beta -X^{T} y^{*} =0$
+
+$\displaystyle X^{T} X \beta =X^{T} y^{*}$
+
+$\displaystyle \left( X^{T} X\right)^{-1} X^{T} X \beta =\left( X^{T} X\right)^{-1} X^{T} y^{*}$
+
+$\displaystyle \beta =\left( X^{T} X\right)^{-1} X^{T} y^{*}$
+
+$\displaystyle \Sigma =\frac{1}{N}\left(\sum _{i:y_{i}^{*} =-1}( X_{i} -\mu _{-1})^{T} \times ( X_{i} -\mu _{-1}) +\sum _{i:y_{i}^{*} =1}( X_{i} -\mu _{1})^{T} \times ( X_{i} -\mu _{1})\right)$
+
+$\displaystyle  \begin{array}{{>{\displaystyle}l}}
+\Sigma =\frac{1}{N}(\sum _{i:y_{i}^{*} =-1} X_{i}^{T} X-\sum _{i:y_{i}^{*} =-1} X_{i}^{T} \mu _{-1} -\sum _{i:y_{i}^{*} =-1} X_{i} \mu _{-1}^{T} +\sum _{i:y_{i}^{*} =-1} \mu _{-1}^{T} \mu _{-1}\\
++\sum _{i:y_{i}^{*} =1} X_{i}^{T} X-\sum _{i:y_{i}^{*} =1} X_{i}^{T} \mu _{1} -\sum _{i:y_{i}^{*} =1} X_{i} \mu _{1}^{T} +\sum _{i:y_{i}^{*} =1} \mu _{1}^{T} \mu _{1})
+\end{array}$
+
+Because the sum $\displaystyle \sum _{i:y_{i}^{*} =-1} X_{i}^{T} X+\sum _{i:y_{i}^{*} =1} X_{i}^{T} X$ covers every possible case in N,
+
+this sum can be simplified as$\displaystyle \sum _{i=1}^{N} X_{i}^{T} X$.
+
+$\displaystyle \mu _{-1} =\frac{1}{N_{-1}}\sum _{i:y_{i}^{*} =-1} X_{i}$, $\displaystyle \mu _{1} =\frac{1}{N_{1}}\sum _{i:y_{i}^{*} =1} X_{i}$, and $\displaystyle N_{-1} =N_{1} =\frac{N}{2}$ lead to
+
+$\displaystyle \sum _{i:y_{i}^{*} =-1} X_{i}^{T} \mu _{-1} +\sum _{i:y_{i}^{*} =1} X_{i}^{T} \mu _{1} =\frac{2}{N}\sum _{i=1}^{N} X_{i}^{T} X$.
+
+$\displaystyle \frac{1}{N}(\sum _{i:y_{i}^{*} =-1} \mu _{-1}^{T} \mu _{-1} +$$\displaystyle \sum _{i:y_{i}^{*} =1} \mu _{1}^{T} \mu _{1})$ simplifies to $\displaystyle \frac{1}{2}\left( \mu _{-1}^{T} \mu _{-1} +\mu _{1}^{T} \mu _{1}\right)$.
+
+This leaves us with
+
+$\displaystyle \Sigma =( N-2)\sum _{i=1}^{N} X_{i}^{T} X-N\left(\sum _{i:y_{i}^{*} =-1} X_{i} \mu _{-1}^{T} +\sum _{i:y_{i}^{*} =1} X_{i} \mu _{1}^{T}\right) +\frac{1}{2}\left( \mu _{-1}^{T} \mu _{-1} +\mu _{1}^{T} \mu _{1}\right)$
+
+
+
+
+
+
+$\displaystyle \Sigma =\frac{1}{N}\left(\sum _{i:y_{i}^{*} =-1}( X_{i} -\mu _{-1})^{T} \times ( X_{i} -\mu _{-1}) +\sum _{i:y_{i}^{*} =1}( X_{i} -\mu _{1})^{T} \times ( X_{i} -\mu _{1})\right)$
+
+$\displaystyle \Sigma \times \beta +\frac{1}{4}( \mu _{1} -\mu _{-1})^{T} \times ( \mu _{1} -\mu _{-1}) \times \beta =\frac{1}{2}( \mu _{1} -\mu _{-1})$
+\end{center}
